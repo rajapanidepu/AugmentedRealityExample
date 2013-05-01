@@ -13,7 +13,11 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
                                             ITrackableEventHandler
 {
     #region PRIVATE_MEMBER_VARIABLES
- 
+ 	//Public attributes for augmented reality proyect
+	public GameObject camera;
+	public GUITexture splash;
+	
+	
     private TrackableBehaviour mTrackableBehaviour;
     
     #endregion // PRIVATE_MEMBER_VARIABLES
@@ -67,6 +71,18 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
     private void OnTrackingFound()
     {
+		
+		//Play music
+		if(camera!=null){
+			if(!camera.transform.audio.isPlaying){
+        		camera.transform.audio.Play();
+			}
+		}
+		//Hide splash
+		if(splash!=null){
+			splash.enabled=false;
+		}
+		
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
         Collider[] colliderComponents = GetComponentsInChildren<Collider>();
 
@@ -88,6 +104,18 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
     private void OnTrackingLost()
     {
+		
+		//Hide splash
+		if(splash!=null){
+			splash.enabled=true;
+		}
+		//Stop music. Uncomment this if you want to stop the music when the app lost the target
+		//
+		//if(camera!=null){
+		//	if(camera.transform.audio.isPlaying){
+        //		camera.transform.audio.Stop();
+		//	}
+		//}
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
         Collider[] colliderComponents = GetComponentsInChildren<Collider>();
 

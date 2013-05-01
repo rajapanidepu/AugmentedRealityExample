@@ -1,8 +1,18 @@
 using UnityEngine;
 using System.Collections;
 
+/**
+ * Script created to control where the user touch in the screen and proyect
+ * this touch into the scene.
+ * If you want to use this script yo have to add a collider to your object
+ * and rename it. Then create an empty objetc ant attach this script to it.
+ * When you have the collider prepared configure the script in the inspector
+ * with the name of the object and the url to open.
+ * 
+ * */
 public class InputController : MonoBehaviour {
 	/** Attributes */
+	
 	//Public
 	public Camera myCamera;
 	public string objectName;
@@ -11,9 +21,6 @@ public class InputController : MonoBehaviour {
 	//Private
 	private RaycastHit hit;
 	private Ray ray;
-	
-	
-	
 	
 	// Update is called once per frame
 	void Update () {
