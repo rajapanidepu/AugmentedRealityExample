@@ -9,7 +9,7 @@ Augmented Reality (AR) refers to the direct or indirect view of a real-world env
 
 To use this app you have to print the target and point your phone's camera at it. Enjoy with the great 3D model in the real world. 
 
-This project is a simple example of how create an Agmented Reality app for Android or iOS. There are other good examples of AugmentedReality developed by me like:
+This project is a simple example of how create an Agmented Reality app for Android or iOS. This example has been used in a live demo to show how to build Augmented Reality Applications. There are other good examples of AugmentedReality developed by me like:
 
 - IdeaIngeniería -> https://itunes.apple.com/es/app/id548260629?mt=8
 
